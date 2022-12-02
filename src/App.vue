@@ -23,9 +23,21 @@ export default {
 </script>
 
 <template>
-  <TheNavVue></TheNavVue>
+  <div class="container">
+    <TheNavVue></TheNavVue>
+  </div>
+  <main class='bg-dark text-white'>
+    <div class="container p-5">
+      -->Content Here --
+    </div>
+  </main>
+  <Banner></Banner>
+  <TheFooter></TheFooter>
+  <SocialBanner></SocialBanner>
+
+
 </template>
 
-<style lang="scss">
-@use "./styles/general.scss"
+<style>
+
 </style>
