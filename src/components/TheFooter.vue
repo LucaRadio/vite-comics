@@ -1,6 +1,8 @@
 <script>
-export default {
+import SocialBanner from './SocialBanner.vue';
 
+export default {
+    components: { SocialBanner }
 }
 </script>
 <template>
@@ -58,6 +60,7 @@ export default {
             </div>
         </div>
     </footer>
+    <SocialBanner />
 </template>
 
 

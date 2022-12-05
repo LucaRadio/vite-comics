@@ -40,7 +40,6 @@ export default {
   </main>
   <Banner></Banner>
   <TheFooter></TheFooter>
-  <SocialBanner></SocialBanner>
 
 
 </template>
