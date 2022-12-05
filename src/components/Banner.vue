@@ -2,6 +2,33 @@
 export default {
     data() {
         return {
+            merchList: [
+                {
+                    text: "DIGITAL COMICS",
+                    url: "buy-comics-digital-comics.png"
+                },
+                {
+                    text: "DC MERCHANDISE",
+                    url: "buy-comics-merchandise.png"
+                },
+                {
+                    text: "SUBSCRIPTION",
+                    url: "buy-comics-subscriptions.png"
+                },
+                {
+                    text: "COMIC SHOP LOCATION",
+                    url: "buy-comics-shop-locator.png"
+                },
+                {
+                    text: "DC POWER VISA",
+                    url: "buy-dc-power-visa.svg"
+                },
+            ]
+        }
+    },
+    methods: {
+        getUrl(item) {
+            return new URL(`../assets/${item.url}`, import.meta.url);
         }
     }
 }
@@ -10,25 +37,10 @@ export default {
     <section>
         <div class="container">
             <div class="row row-cols-5 py-5">
-                <div class="col">
-                    <img src="../assets/buy-comics-digital-comics.png">
-                    <small class="ms-2 text-white">DIGITAL COMICS</small>
-                </div>
-                <div class="col">
-                    <img src="../assets/buy-comics-merchandise.png">
-                    <small class="ms-2 text-white">DC MERCHANDISE</small>
-                </div>
-                <div class="col">
-                    <img src="../assets/buy-comics-subscriptions.png">
-                    <small class="ms-2 text-white">SUBSCRIPTION</small>
-                </div>
-                <div class="col">
-                    <img src="../assets/buy-comics-shop-locator.png">
-                    <small class="ms-2 text-white">COMIC SHOP LOCATION</small>
-                </div>
-                <div class="col">
-                    <img src="../assets/buy-dc-power-visa.svg">
-                    <small class="ms-2 text-white">DC POWER VISA</small>
+
+                <div class="col" v-for="item in merchList">
+                    <img :src="getUrl(item)">
+                    <small class="ms-2 text-white">{{ item.text }}</small>
                 </div>
 
             </div>
