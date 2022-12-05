@@ -90,7 +90,6 @@ export default {
     <div class="row row-cols-6 g-4 p-3">
         <div class="col" v-for="item in comicsList">
             <SingleCard :comic="item" />
-
         </div>
 
         <button class="my-btn">LOAD MORE</button>

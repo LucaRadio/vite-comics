@@ -39,7 +39,9 @@ export default {
             <div class="row row-cols-5 py-5">
 
                 <div class="col" v-for="item in merchList">
+                    <!-- METTENDO LE IMMAGINI IN ASSETS -->
                     <img :src="getUrl(item)">
+                    <!-- <img :src="item.url" alt="">   METTENDOLE IN PUBLIC -->
                     <small class="ms-2 text-white">{{ item.text }}</small>
                 </div>
 
