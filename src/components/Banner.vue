@@ -9,7 +9,7 @@ export default {
 <template>
     <section>
         <div class="container">
-            <div class="row row-cols-5 py-4">
+            <div class="row row-cols-5 py-5">
                 <div class="col">
                     <img src="../assets/buy-comics-digital-comics.png">
                     <small class="ms-2 text-white">DIGITAL COMICS</small>
@@ -37,7 +37,7 @@ export default {
     </section>
 </template>
 <style scope lang="scss">
-@use '../styles/general.scss' as *;
+@use '../styles/general' as *;
 
 section {
     background-color: $color-primary-dc;
@@ -49,7 +49,9 @@ section {
     }
 
     .col img {
-        width: 30px;
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
     }
 
     .col>small {
