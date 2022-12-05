@@ -1,7 +1,7 @@
 <script>
 export default {
     props: {
-        comicsList: Array
+        comic: Object
     },
 
 
@@ -15,14 +15,12 @@ export default {
 </script>
 
 <template>
-    <div class="col" v-for="singleCard in comicsList">
-        <div class="img-container">
-            <img :src="singleCard.thumb">
-
-        </div>
-        <span>{{ singleCard.series.toUpperCase() }}</span>
+    <div class="img-container">
+        <img :src="comic.thumb">
 
     </div>
+    <span>{{ comic.series.toUpperCase() }}</span>
+
 </template>
 
 <style lang="scss">

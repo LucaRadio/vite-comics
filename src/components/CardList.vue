@@ -88,7 +88,10 @@ export default {
 <template>
     <div class="title">CURRENT SERIES</div>
     <div class="row row-cols-6 g-4 p-3">
-        <SingleCard :comics-list="comicsList" />
+        <div class="col" v-for="item in comicsList">
+            <SingleCard :comic="item" />
+
+        </div>
 
         <button class="my-btn">LOAD MORE</button>
     </div>
